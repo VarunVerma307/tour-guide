@@ -1,14 +1,8 @@
-import React , {useState} from 'react';
-import './App.css';
-import Tours from './components/Tours';
-
-
-function App() {
-  const data=[
+const data = [
     {
        id:1,
        title:"Agra",
-       price: "$345/-",
+       price: "$3456/-",
        image: "https://unciatrails.com/wp-content/uploads/2020/07/Taj2-1.jpg",
        info: "Agra is a city on the banks of the river Yamuna in the northern state of Uttar Pradesh, India. It is 378 kilometers west of the state capital, Lucknow, 206 kilometers south of the national capital New Delhi, 58 kilometers south from Mathura and 125 kilometers north of Gwalior. Agra is one of the most populous cities in Uttar Pradesh, and the 24th most populous city in India."
 
@@ -56,27 +50,4 @@ function App() {
         info:  "Darjeeling, the former summer capital of India under the British Raj, has evolved into one of India's most sought-after hill stations. This picturesque hill destination in West Bengal is ideal for a romantic honeymoon. Darjeeling, nestled among acres of tea estates, is 2,050 metres above sea level and thus has a cool climate all year.The third highest peak in the world and the highest in India, the Kanchenjunga peak, is visible from here, and you can enjoy a panoramic view of the peak. Some of Darjeeling's most popular attractions include monasteries, botanical gardens, a zoo."
     }
 ]
- const [tours,setTours]=useState(data);
- function removetour(id){
-    const newtours=tours.filter(tour => tour.id !== id);
-    setTours(newtours);
- }
- function refresh(){
-    setTours(data);
- }
- if(tours.length===0){
-    return(
-        <div className='notour'> 
-            <h1>NO TOURS LEFT</h1>
-            <button onClick={refresh}>Refresh</button>
-        </div>
-    )
- }
-  return (
-   <div>
-     <Tours tours={tours} remove={removetour}/>
-   </div>
-  );
-}
 
-export default App;

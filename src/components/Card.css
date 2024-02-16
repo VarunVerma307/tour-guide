@@ -1,0 +1,31 @@
+.card{
+    width: 28%;
+    margin: 1%;
+    padding: 1%;
+    box-shadow: 5px 5px 10px black;
+}
+.card-image{
+    height: 100%;
+    width: 100%;
+}
+.card-image img{
+    height: 300px;
+    width: 100%;
+}
+.not{
+    padding: 7px;
+    background-color: rgb(227, 62, 62);
+    border: none;
+    font-size: 18px;
+    border-radius: 5px;
+    color: white;
+
+}
+.price{
+    color: green;
+    font-weight: bold;
+}
+span{
+    color: rgb(5, 124, 122);
+    cursor: pointer;
+}
